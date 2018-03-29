@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Ecommerce client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "server":"webpack-dev-server",
+    "dev":"SET WEBPACK_ENV=dev&webpack-dev-server --inline --port 8088"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuhanLin1105/Ecommerce.git"
+  },
+  "author": "Yuhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuhanLin1105/Ecommerce/issues"
+  },
+  "homepage": "https://github.com/YuhanLin1105/Ecommerce#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
