@@ -2,7 +2,7 @@
  * @Author: Yuhan 
  * @Date: 2018-03-29 22:35:43 
  * @Last Modified by: Yuhan
- * @Last Modified time: 2018-03-31 09:47:38
+ * @Last Modified time: 2018-03-31 10:13:14
  */
 "use strict";
 
@@ -24,3 +24,9 @@ utils.request({
 });
 
 console.log("param:" + utils.getUrlParam("test"));
+
+const t = "<h1>{{data}}</h1>";
+const data = {
+  test: 123
+};
+console.log(utils.renderHtml(t, data));

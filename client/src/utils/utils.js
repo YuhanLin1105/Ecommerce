@@ -2,10 +2,12 @@
  * @Author: Yuhan 
  * @Date: 2018-03-29 21:36:39 
  * @Last Modified by: Yuhan
- * @Last Modified time: 2018-03-31 09:51:46
+ * @Last Modified time: 2018-03-31 10:24:35
  */
 "use strict";
 const $ = require("jquery");
+const Hogan = require("hogan.js");
+
 const config = {
   serverHost: ""
 };
@@ -45,6 +47,32 @@ const _utils = {
   doLogin: function() {
     window.location.href =
       "./login.html?redirect=" + encodeURIComponent(window.location.href);
+  },
+  renderHtml: function(htmlTemplate, data) {
+    const template = Hogan.compile(htmlTemplate);
+    const result = template.render(data);
+    return result;
+  },
+
+  successTips: function(msg) {
+    alert(msg || "success");
+  },
+  errTips: function(msg) {
+    alert(msg || "something wrong");
+  },
+  validate: function(value, type) {
+    const value = $.trim(value);
+    if (type === "require") {
+      return !!value;
+    }
+    if (type === "phone") {
+      return /\d{10}$/.test(value);
+    }
+    if (type === "email") {
+      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        value
+      );
+    }
   }
 };
 

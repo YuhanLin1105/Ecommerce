@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
-    "server":"webpack-dev-server",
-    "dev":"SET WEBPACK_ENV=dev&webpack-dev-server --inline --port 8088"
+    "server": "webpack-dev-server",
+    "dev": "SET WEBPACK_ENV=dev&webpack-dev-server --inline --port 8088"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
+    "hogan": "^1.0.2",
     "jquery": "^3.3.1"
   }
 }
