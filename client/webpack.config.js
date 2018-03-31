@@ -2,7 +2,7 @@
  * @Author: Yuhan 
  * @Date: 2018-03-28 17:57:59 
  * @Last Modified by: Yuhan
- * @Last Modified time: 2018-03-28 22:41:16
+ * @Last Modified time: 2018-03-29 22:53:47
  */
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -16,13 +16,12 @@ const getHtmlConfig = name => {
     filename: `view/${name}.html`,
     inject: true,
     hash: true,
-    chunks: ["vender", "commons", name]
+    chunks: ["commons", name]
   };
 };
 
 const config = {
   entry: {
-    vendor: ["jquery"],
     commons: ["./src/page/commons/index.js"],
     index: ["./src/page/index/index.js"],
     login: ["./src/page/login/index.js"]
@@ -45,9 +44,18 @@ const config = {
     ]
   },
 
+  resolve: {
+    alias: {
+      utils: __dirname + "/src/utils",
+      page: __dirname + "/src/page",
+      service: __dirname + "/src/service",
+      image: __dirname + "/src/image"
+    }
+  },
+
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ["vendor", "commons"],
+      name: ["commons"],
       filename: "js/[name].js"
     }),
     new ExtractTextPlugin("css/[name].css"),
