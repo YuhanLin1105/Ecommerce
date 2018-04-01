@@ -2,7 +2,7 @@
  * @Author: Yuhan 
  * @Date: 2018-03-29 21:36:39 
  * @Last Modified by: Yuhan
- * @Last Modified time: 2018-03-31 10:24:35
+ * @Last Modified time: 2018-04-01 10:44:23
  */
 "use strict";
 const $ = require("jquery");
@@ -45,6 +45,7 @@ const _utils = {
     return result ? decodeURIComponent(result[2]) : null;
   },
   doLogin: function() {
+    console.log("doLogin");
     window.location.href =
       "./login.html?redirect=" + encodeURIComponent(window.location.href);
   },

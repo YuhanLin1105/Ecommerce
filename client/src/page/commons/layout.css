@@ -2,7 +2,7 @@
  * @Author: Yuhan 
  * @Date: 2018-03-31 10:37:26 
  * @Last Modified by: Yuhan
- * @Last Modified time: 2018-03-31 15:19:06
+ * @Last Modified time: 2018-04-01 09:51:03
  */
 /* css reset*/
 *,
@@ -45,6 +45,11 @@ input[type='checkbox']{
   margin:0 auto;
   position:relative;
   overflow:hidden;  
+}
+.w::after{
+    display: table;
+    content:'';
+    clear: both;
 }
 
 /* common */
