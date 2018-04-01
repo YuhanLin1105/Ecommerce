@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%=require('html-loader!./layout/html-head.html')%>
+    <head>
+        <%=require('html-loader!./layout/head-common.html')%>
+    <title>HappyMMall</title>
+    </head>
 <body>
+    <%=require('html-loader!./layout/nav.html')%>
     Index.html
+    <%=require('html-loader!./layout/footer-common.html')%>
 </body>
 </html>

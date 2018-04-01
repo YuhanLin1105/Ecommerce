@@ -2,7 +2,7 @@
  * @Author: Yuhan 
  * @Date: 2018-03-28 17:57:59 
  * @Last Modified by: Yuhan
- * @Last Modified time: 2018-03-29 22:53:47
+ * @Last Modified time: 2018-03-31 15:28:25
  */
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -46,6 +46,7 @@ const config = {
 
   resolve: {
     alias: {
+      node_modules: __dirname + "/node_modules",
       utils: __dirname + "/src/utils",
       page: __dirname + "/src/page",
       service: __dirname + "/src/service",

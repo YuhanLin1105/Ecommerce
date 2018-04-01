@@ -1,0 +1,11 @@
+.nav-common{
+    height:6rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    line-height: 6rem;
+}
+.nav-common .logo{
+    font-size:26px;
+    font-weight: bold;
+    color:#c60023; 
+}
